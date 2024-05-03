@@ -1,0 +1,1 @@
+D:\02 - Projetos GitHub\C#\FullStack\AppTime\AppTime.csproj;x64

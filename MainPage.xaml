@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              BackgroundColor="Green"
+             x:Name="PageBackgroundColor"
+             x:Class="AppTime.MainPage">
+
+    <VerticalStackLayout Spacing="20" 
+                         VerticalOptions="CenterAndExpand" 
+                         HorizontalOptions="CenterAndExpand">
+        <HorizontalStackLayout Spacing="10">
+
+            <Picker HorizontalTextAlignment="Start" 
+                    x:Name="ItemSelect" 
+                    SelectedIndexChanged="Picker_SelectedIndexChanged" 
+                    FontAttributes="Bold" 
+                    TitleColor="White" 
+                    TextColor="White" 
+                    Title="Tempo" 
+                    WidthRequest="90">
+                <Picker.Items>
+                    <x:String>15:00</x:String>
+                    <x:String>30:00</x:String>
+                    <x:String>40:00</x:String>
+                    <x:String>50:00</x:String>
+                    <x:String>60:00</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <VerticalStackLayout Spacing="15">
+                <Label Text="Tempo Total" 
+                       TextColor="White" />
+                <Label x:Name="Study" 
+                       Text="00:00:00" 
+                       TextColor="White" 
+                       FontAttributes="Bold" 
+                       HorizontalOptions="Center"/>
+            </VerticalStackLayout>
+        </HorizontalStackLayout>
+
+        <Border StrokeShape="RoundRectangle 10">
+            <Label HorizontalOptions="Center" 
+                   x:Name="DisplayTime" 
+                   Text="00:00" 
+                   FontAttributes="Bold" 
+                   TextColor="White" 
+                   FontSize="40"/>
+        </Border>
+
+        <HorizontalStackLayout HorizontalOptions="CenterAndExpand"
+                               Spacing="0">
+
+            <Button x:Name="ButtonPlay" 
+                    Text="▶️" 
+                    FontAttributes="Bold"
+                    FontSize="26"
+                    BackgroundColor="Transparent" 
+                    Clicked="OnCounterClicked"
+                    WidthRequest="70"/>
+
+            <Button Clicked="Reset"
+                    Text="🔄"
+                    TextColor="White"
+                    FontSize="26"
+                    BackgroundColor="Transparent"/>
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>
